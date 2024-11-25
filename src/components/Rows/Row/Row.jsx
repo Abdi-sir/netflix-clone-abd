@@ -69,8 +69,8 @@ function Row({ title, fetchURL, isLargeRow }) {
           // console.log(movie)
           return (
             <>
-              {/* {console.log(index)}
-              {console.log(movie)} */}
+             
+              {console.log(movie)}
               <img
                 key={movie.id}
                 onClick={() => playTrailer(movie)}
