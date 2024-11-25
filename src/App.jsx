@@ -1,7 +1,17 @@
-import React from 'react'
+import { useState } from 'react'
+import './App.css'
+import Home from './components/Home/Home'
 
-export default function App() {
+function App() {
+
+
   return (
-    <div>hello</div>
+    <>
+      <div>
+        <Home/>
+      </div>
+    </>
   )
 }
+
+export default App
