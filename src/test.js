@@ -12,7 +12,7 @@ app.post("/addiphones", (req, res) => {
     let PriceRange = req.body.priceRange;
     let Description = req.body.desc;
   
-    console.log(req.body);
+    // console.log(req.body);
     //   var url = req.body.product_url;
     //   var product = req.body.product_name;
     let prd = `INSERT INTO Products (product_url, product_name)
@@ -20,7 +20,7 @@ app.post("/addiphones", (req, res) => {
   
     connection.query(prd, [url, name], function (err, result) {
       if (err) throw err;
-      console.log("inserted");
+      // console.log("inserted");
       var id = result.insertId;
   
       // if(Brief!=0 && Description!=0 && link!=0){
@@ -33,7 +33,7 @@ app.post("/addiphones", (req, res) => {
         [id, Brief, Description, img, link],
         function (err, result) {
           if (err) throw err;
-          console.log("inserted desc table");
+          // console.log("inserted desc table");
         }
       );
       // }
@@ -41,7 +41,7 @@ app.post("/addiphones", (req, res) => {
     VALUES(?,?,?)`;
       connection.query(price_table, [id, StartPrice, PriceRange], (err, res) => {
         if (err) throw err;
-        console.log("inserted price table");
+        // console.log("inserted price table");
       });
     });
   });

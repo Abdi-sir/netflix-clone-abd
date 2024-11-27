@@ -70,7 +70,7 @@ function Row({ title, fetchURL, isLargeRow }) {
           return (
             <>
              
-              {console.log(movie)}
+              {/* {console.log(movie)} */}
               <img
                 key={movie.id}
                 onClick={() => playTrailer(movie)}
